@@ -1,0 +1,35 @@
+<!--version française-->
+<resources>
+    <!--page de connexion-->
+    <string name="app_name">Outil de Suivi SAV</string>
+    <string name="titre_connexion">Connexion</string>
+    <string name="identifiant">Identifiant :</string>
+    <string name="motDePasse">Mot de passe :</string>
+    <string name="boutonConnexion">Se connecter</string>
+    <string name="erreurIdentifiant">Votre identifiant est incorrect !</string>
+    <string name="erreurMotDePasse">Votre mot de passe est incorrect !</string>
+    <string name="erreurChampsVides">Veuillez renseigner tous les champs s\'il vous plaît !</string>
+    <!--_____________________-->
+
+    <!--page liste des dossiers sav et page détail dossier sav-->
+    <string name="titre_ListeDossierClient">Dossiers SAV</string>
+    <string name="titre_rechercheListeDossierClient">Critères de recherche</string>
+    <string name="msg_erreur_numeroDossier">Votre numéro de dossier est incorrect !</string>
+    <string name="msg_erreur_codePostal">Votre code postal est incorrect !</string>
+    <string name="id_dossier">N° Dossier :</string>
+    <string name="date_creation">Date Création :</string>
+    <string name="nom_client">Nom Client : </string>
+    <string name="code_postal">Code Postal : </string>
+    <string name="statut">Statut SAV :</string>
+    <string name="bouton_recherche_listeDossier">Rechercher</string>
+    <string name="titre_dossier">Dossier SAV</string>
+    <string name="cause">Cause SAV :</string>
+    <string name="type">Type SAV :</string>
+    <string name="numCommande">N° Commande :</string>
+    <!--____________________________-->
+
+    <!--bouton utilisé dans plusieurs pages-->
+    <string name="retour_btn">Retour</string>
+    <!--____________________________-->
+
+</resources>

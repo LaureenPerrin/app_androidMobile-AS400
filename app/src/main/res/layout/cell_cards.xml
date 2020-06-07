@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    app:cardBackgroundColor="@android:color/white"
+    android:background="@drawable/bordurecardview"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp">
+
+    <!-- Les CardView possèdent des attributs supplémentaires dont
+         - cardBackgroundColor
+         - cardElevation pour l'élévation (donc aussi l'ombre)
+         - cardCornerRadius pour arrondir les angles
+     -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="1dp">
+
+        <!-- Les CardView agissent comme des FrameLayout,
+         pour avoir une organisation verticale nous devons
+         donc rajouter un LinearLayout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreIdDossier"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/noir"
+                android:padding="2dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="italic"
+                tools:text="@string/id_dossier" />
+
+            <TextView
+                android:id="@+id/tv_cv_idDossier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cv_titreDatecrea"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:padding="2dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/noir"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="@string/date_creation"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_cv_dateCrea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/noir"
+            android:textSize="12sp"
+            tools:text="" />
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreNomClient"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:padding="2dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/nom_client" />
+
+            <TextView
+                android:id="@+id/tv_cv_nomClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+
+
+
+
+        </LinearLayout>
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreStatut"
+                android:layout_width="113dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/statut"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+-->
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

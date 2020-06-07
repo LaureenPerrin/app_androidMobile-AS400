@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DossierSavActivity"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bordureformulaireconnexion"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".DossierSavActivity">
+
+        <TextView
+            android:id="@+id/titre_detail_dossier"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/noir"
+            android:text="@string/titre_dossier"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin ="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/titre_detail_dossier"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreIdDossier"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/id_dossier" />
+
+            <TextView
+                android:id="@+id/tv_cv_idDossier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreDatecrea"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/date_creation"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_dateCrea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreNomClient"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/nom_client" />
+
+            <TextView
+                android:id="@+id/tv_cv_nomClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreStatut"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/statut"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreType"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/type"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreCause"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/cause"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_cause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cv_titreNumeroCommande"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/noir"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:text="@string/numCommande"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_cv_numeroCommande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="?android:selectableItemBackground"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/noir"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="retour"
+            android:text="@string/retour_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_info" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version anglaise-->
+<resources>
+    <!--page de connexion-->
+    <string name="app_name">titre anglais</string>
+    <string name="titre_connexion">Connection</string>
+    <string name="identifiant">Username :</string>
+    <string name="motDePasse">Password :</string>
+    <string name="boutonConnexion">To log in</string>
+    <string name="erreurIdentifiant">Your username is incorrect !</string>
+    <string name="erreurMotDePasse">Your password is incorrect !</string>
+    <string name="erreurChampsVides">Please fill in all the fields !</string>
+
+    <!--_____________________-->
+
+    <!--page liste des dossiers sav et page détail dossier sav-->
+    <string name="titre_ListeDossierClient">SAV Folders</string>
+    <string name="titre_rechercheListeDossierClient">Search Criteria</string>
+    <string name="msg_erreur_numeroDossier">Your file number is incorrect !</string>
+    <string name="msg_erreur_codePostal">Your postal code is incorrect !</string>
+    <string name="id_dossier">File Number :</string>
+    <string name="date_creation">Creation Date :</string>
+    <string name="nom_client">Client Name :</string>
+    <string name="code_postal">Postal Code : </string>
+    <string name="statut">SAV Status :</string>
+    <string name="bouton_recherche_listeDossier">Search</string>
+    <string name="numero_dossier">File Number :</string>
+    <string name="titre_dossier">SAV Folder</string>
+    <string name="cause">Cause :</string>
+    <string name="type">SAV Type :</string>
+    <string name="numCommande">Order Number :</string>
+    <!--____________________________-->
+
+    <!--bouton utilisé dans plusieurs pages-->
+    <string name="retour_btn">Return</string>
+    <!--____________________________-->
+
+</resources>
