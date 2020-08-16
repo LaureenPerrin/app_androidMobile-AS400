@@ -16,10 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListeDossiersSavTriee"></activity>
-        <activity android:name=".DossierSavActivity" />
-        <activity android:name=".ListeDossiersSAVActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ListeDossiersSavTrieeActivity" />
+        <activity android:name=".activity.DossierSavActivity" />
+        <activity android:name=".activity.ListeDossiersSAVActivity" />
+        <activity android:name=".activity.ConnexionOutilSavActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

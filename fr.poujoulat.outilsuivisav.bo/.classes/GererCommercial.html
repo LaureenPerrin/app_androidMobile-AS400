@@ -1,0 +1,247 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: GererCommercial</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">fr.poujoulat.outilsuivisav.bo</a> ]
+</div>
+
+<h1>Coverage Summary for Class: GererCommercial (fr.poujoulat.outilsuivisav.bo)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GererCommercial</td>
+<td class="coverageStat">
+  <span class="percent">
+    23,5%
+  </span>
+  <span class="absValue">
+    (4/ 17)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    37%
+  </span>
+  <span class="absValue">
+    (17/ 46)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">GererCommercial$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    33,3%
+  </span>
+  <span class="absValue">
+    (1/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    33,3%
+  </span>
+  <span class="absValue">
+    (1/ 3)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    25%
+  </span>
+  <span class="absValue">
+    (5/ 20)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    36,7%
+  </span>
+  <span class="absValue">
+    (18/ 49)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package fr.poujoulat.outilsuivisav.bo;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import android.os.Parcel;
+<i>4</i>&nbsp;import android.os.Parcelable;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import java.util.regex.Matcher;
+<i>7</i>&nbsp;import java.util.regex.Pattern;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;public class GererCommercial implements Parcelable {
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    private int id;
+<i>12</i>&nbsp;    private String identifiant;
+<i>13</i>&nbsp;    private String motDePasse;
+<i>14</i>&nbsp;    private String nom;
+<i>15</i>&nbsp;    private String prenom;
+<b class="fc"><i>16</i>&nbsp;    public static final Creator&lt;GererCommercial&gt; CREATOR = new Creator&lt;GererCommercial&gt;() {</b>
+<i>17</i>&nbsp;        @Override
+<i>18</i>&nbsp;        public GererCommercial createFromParcel(Parcel in) {
+<b class="nc"><i>19</i>&nbsp;            return new GererCommercial(in);</b>
+<i>20</i>&nbsp;        }
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;        @Override
+<i>23</i>&nbsp;        public GererCommercial[] newArray(int size) {
+<b class="nc"><i>24</i>&nbsp;            return new GererCommercial[size];</b>
+<i>25</i>&nbsp;        }
+<i>26</i>&nbsp;    };
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;
+<b class="fc"><i>29</i>&nbsp;    public GererCommercial() {</b>
+<b class="fc"><i>30</i>&nbsp;    }</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    public boolean isValidIdentifiant(String identifiant){
+<i>33</i>&nbsp;        //création de la regex :
+<b class="fc"><i>34</i>&nbsp;        String regex = &quot;^[A-Za-z0-9+_.-]+@[A-Za-z0-9+_.-]+[.]+[A-Za-z]{2,3}$&quot;;</b>
+<i>35</i>&nbsp;        //création du pattern:
+<b class="fc"><i>36</i>&nbsp;        Pattern pattern = Pattern.compile(regex);</b>
+<i>37</i>&nbsp;        //oncompare l&#39;identifiant et le pattern :
+<b class="fc"><i>38</i>&nbsp;        Matcher matcher = pattern.matcher(identifiant);</b>
+<i>39</i>&nbsp;
+<b class="fc"><i>40</i>&nbsp;        boolean verifcationId = matcher.matches();</b>
+<b class="fc"><i>41</i>&nbsp;        if (verifcationId) {</b>
+<b class="fc"><i>42</i>&nbsp;            return true;</b>
+<i>43</i>&nbsp;        } else {
+<b class="fc"><i>44</i>&nbsp;            return false;</b>
+<i>45</i>&nbsp;        }
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;    public boolean isValidPassword(String password){
+<i>49</i>&nbsp;        //création de la regex :
+<i>50</i>&nbsp;        //entre 8 et 15 caractères max :
+<b class="fc"><i>51</i>&nbsp;        String regex = &quot;^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,15}$&quot;;</b>
+<i>52</i>&nbsp;        //création du pattern:
+<b class="fc"><i>53</i>&nbsp;        Pattern pattern = Pattern.compile(regex);</b>
+<i>54</i>&nbsp;        //on compare le password et le pattern :
+<b class="fc"><i>55</i>&nbsp;        Matcher matcher = pattern.matcher(password);</b>
+<b class="fc"><i>56</i>&nbsp;        boolean verificationPassword = matcher.matches();</b>
+<i>57</i>&nbsp;
+<b class="fc"><i>58</i>&nbsp;        if (verificationPassword) {</b>
+<b class="fc"><i>59</i>&nbsp;            return true;</b>
+<i>60</i>&nbsp;        } else {
+<b class="fc"><i>61</i>&nbsp;            return false;</b>
+<i>62</i>&nbsp;        }
+<i>63</i>&nbsp;    }
+<i>64</i>&nbsp;
+<b class="nc"><i>65</i>&nbsp;    protected GererCommercial(Parcel in) {</b>
+<b class="nc"><i>66</i>&nbsp;        id = in.readInt();</b>
+<b class="nc"><i>67</i>&nbsp;        identifiant = in.readString();</b>
+<b class="nc"><i>68</i>&nbsp;        motDePasse = in.readString();</b>
+<b class="nc"><i>69</i>&nbsp;        nom = in.readString();</b>
+<b class="nc"><i>70</i>&nbsp;        prenom = in.readString();</b>
+<b class="nc"><i>71</i>&nbsp;    }</b>
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    @Override
+<i>74</i>&nbsp;    public void writeToParcel(Parcel dest, int flags) {
+<b class="nc"><i>75</i>&nbsp;        dest.writeInt(id);</b>
+<b class="nc"><i>76</i>&nbsp;        dest.writeString(identifiant);</b>
+<b class="nc"><i>77</i>&nbsp;        dest.writeString(motDePasse);</b>
+<b class="nc"><i>78</i>&nbsp;        dest.writeString(nom);</b>
+<b class="nc"><i>79</i>&nbsp;        dest.writeString(prenom);</b>
+<b class="nc"><i>80</i>&nbsp;    }</b>
+<i>81</i>&nbsp;
+<i>82</i>&nbsp;    @Override
+<i>83</i>&nbsp;    public int describeContents() {
+<b class="nc"><i>84</i>&nbsp;        return 0;</b>
+<i>85</i>&nbsp;    }
+<i>86</i>&nbsp;
+<i>87</i>&nbsp;
+<i>88</i>&nbsp;
+<i>89</i>&nbsp;    public int getId() {
+<i>90</i>&nbsp;
+<b class="nc"><i>91</i>&nbsp;        return id;</b>
+<i>92</i>&nbsp;    }
+<i>93</i>&nbsp;
+<i>94</i>&nbsp;    public void setId(int id) {
+<i>95</i>&nbsp;
+<b class="nc"><i>96</i>&nbsp;        this.id = id;</b>
+<b class="nc"><i>97</i>&nbsp;    }</b>
+<i>98</i>&nbsp;
+<i>99</i>&nbsp;    public String getIdentifiant() {
+<i>100</i>&nbsp;
+<b class="nc"><i>101</i>&nbsp;        return identifiant;</b>
+<i>102</i>&nbsp;    }
+<i>103</i>&nbsp;
+<i>104</i>&nbsp;    public void setIdentifiant(String identifiant) {
+<i>105</i>&nbsp;
+<b class="nc"><i>106</i>&nbsp;        this.identifiant = identifiant;</b>
+<b class="nc"><i>107</i>&nbsp;    }</b>
+<i>108</i>&nbsp;
+<i>109</i>&nbsp;    public String getMotDePasse() {
+<i>110</i>&nbsp;
+<b class="nc"><i>111</i>&nbsp;        return motDePasse;</b>
+<i>112</i>&nbsp;    }
+<i>113</i>&nbsp;
+<i>114</i>&nbsp;    public void setMotDePasse(String motDePasse) {
+<i>115</i>&nbsp;
+<b class="nc"><i>116</i>&nbsp;        this.motDePasse = motDePasse;</b>
+<b class="nc"><i>117</i>&nbsp;    }</b>
+<i>118</i>&nbsp;
+<i>119</i>&nbsp;    public String getNom() {
+<i>120</i>&nbsp;
+<b class="nc"><i>121</i>&nbsp;        return nom;</b>
+<i>122</i>&nbsp;    }
+<i>123</i>&nbsp;
+<i>124</i>&nbsp;    public void setNom(String nom) {
+<i>125</i>&nbsp;
+<b class="nc"><i>126</i>&nbsp;        this.nom = nom;</b>
+<b class="nc"><i>127</i>&nbsp;    }</b>
+<i>128</i>&nbsp;
+<i>129</i>&nbsp;    public String getPrenom() {
+<i>130</i>&nbsp;
+<b class="nc"><i>131</i>&nbsp;        return prenom;</b>
+<i>132</i>&nbsp;    }
+<i>133</i>&nbsp;
+<i>134</i>&nbsp;    public void setPrenom(String prenom) {
+<i>135</i>&nbsp;
+<b class="nc"><i>136</i>&nbsp;        this.prenom = prenom;</b>
+<b class="nc"><i>137</i>&nbsp;    }</b>
+<i>138</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-06-23 22:35</div>
+</div>
+</body>
+</html>

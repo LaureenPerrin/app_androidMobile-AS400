@@ -3,6 +3,10 @@ package fr.poujoulat.outilsuivisav.bo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//classe bo pour gérer un dossier SAV :
 public class GererDossierSav implements Parcelable {
 
     private int id;
@@ -18,18 +22,6 @@ public class GererDossierSav implements Parcelable {
     public GererDossierSav() {
     }
 
-    public GererDossierSav(int id, String dateCreation, String nomClient, String codePostal, int numCommande, String cause, String statut, String type) {
-        this.id = id;
-        this.dateCreation = dateCreation;
-        this.nomClient = nomClient;
-        this.codePostal = codePostal;
-        this.numCommande = numCommande;
-        this.cause = cause;
-        this.statut = statut;
-        this.type = type;
-
-    }
-
     protected GererDossierSav(Parcel in) {
         id = in.readInt();
         dateCreation = in.readString();
@@ -40,6 +32,40 @@ public class GererDossierSav implements Parcelable {
         statut = in.readString();
         type = in.readString();
 
+    }
+
+    public boolean isValidNomClient(String nomClient){
+        //création de la regex :
+        //composé de lettre majuscule , espace, caractères (._-) et chiffres et entre 3 et 30 caractères max :
+        String regex = "^[\\sA-Z-0-9_.-]{3,30}$";
+        //création du pattern:
+        Pattern pattern = Pattern.compile(regex);
+        //oncompare l'identifiant et le pattern :
+        Matcher matcher = pattern.matcher(nomClient);
+
+        boolean verifcationId = matcher.matches();
+        if (verifcationId) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isValidCodePostal(String codePostal){
+        //création de la regex :
+        //entre 2 et 5 chiffres :
+        String regex = "^(?=.*[0-9]).{2,5}$";
+        //création du pattern:
+        Pattern pattern = Pattern.compile(regex);
+        //on compare le password et le pattern :
+        Matcher matcher = pattern.matcher(codePostal);
+        boolean verificationCodePostal = matcher.matches();
+
+        if (verificationCodePostal) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static final Creator<GererDossierSav> CREATOR = new Creator<GererDossierSav>() {

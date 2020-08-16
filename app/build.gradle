@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    // implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
@@ -28,8 +28,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.android.support:cardview-v7:29.0.2'
-    //implementation files('libs/jtopenlite/jtopenlite.jar')
-    // implementation files('libs/jtopen_10_3/lib/jtopenlite.jar')
-    // implementation files('libs/jtopen_10_3/lib/jt400.jar')
     implementation files('libs/jtopen_10_3/lib/jt400android.jar')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    // testImplementation "org.mockito:mockito-core:2.+"
+    //implementation files('libs/mockito-android-3.3.12.jar')
 }

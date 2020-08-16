@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--version anglaise-->
 <resources>
+
+    <!--variables d'environnement-->
+    <string name="url_connexion_webservice">http://172.17.10.221:****/WSPortal/rest/portal/userframework/********</string>
+    <!--_______________________-->
+
+
     <!--page de connexion-->
     <string name="app_name">titre anglais</string>
     <string name="titre_connexion">Connection</string>
     <string name="identifiant">Username :</string>
     <string name="motDePasse">Password :</string>
     <string name="boutonConnexion">To log in</string>
-    <string name="erreurIdentifiant">Your username is incorrect !</string>
-    <string name="erreurMotDePasse">Your password is incorrect !</string>
+    <string name="erreurIdentifiant">Incorrect identifier. Your email address is not valid.</string>
+    <string name="erreurMotDePasse">Incorrect password. It must contain between 8 and 15 characters and be composed of at least 1 uppercase, 1 lowercase and 1 digit.</string>
     <string name="erreurChampsVides">Please fill in all the fields !</string>
-
+    <string name="erreur_msg_mauvais_compte">Unable to connect to the application, this account does not exist.</string>
+    <string name="erreur_connexion_internet">No internet connection, impossible to connect to the application!</string>
     <!--_____________________-->
 
     <!--page liste des dossiers sav et page détail dossier sav-->
     <string name="titre_ListeDossierClient">SAV Folders</string>
     <string name="titre_rechercheListeDossierClient">Search Criteria</string>
     <string name="msg_erreur_numeroDossier">Your file number is incorrect !</string>
-    <string name="msg_erreur_codePostal">Your postal code is incorrect !</string>
     <string name="id_dossier">File Number :</string>
     <string name="date_creation">Creation Date :</string>
     <string name="nom_client">Client Name :</string>
@@ -29,6 +35,12 @@
     <string name="cause">Cause :</string>
     <string name="type">SAV Type :</string>
     <string name="numCommande">Order Number :</string>
+    <string name="bonjour">Bonjour</string>
+    <string name="nombreDossiersSav">Total service records :</string>
+    <string name="erreurChampsVidesCriteres">Please fill in at least one field!</string>
+    <string name="msg_erreur_nomClient">Incorrect customer name! It must be composed of 3 to 30 characters maximum.</string>
+    <string name="msg_erreur_codePostal">Invalid postal code! It must be made up of 2 to 5 digits maximum.</string>
+    <string name="erreurListeTrouveeVide">No list was found for this criteria.</string>
     <!--____________________________-->
 
     <!--bouton utilisé dans plusieurs pages-->

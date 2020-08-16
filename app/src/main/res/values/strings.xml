@@ -1,31 +1,45 @@
 <!--version française-->
 <resources>
+
+    <!--variables d'environnement-->
+    <string name="url_connexion_webservice">http://172.17.10.221:****/WSPortal/rest/portal/userframework/********</string>
+    <!--_______________________-->
+
+
     <!--page de connexion-->
     <string name="app_name">Outil de Suivi SAV</string>
     <string name="titre_connexion">Connexion</string>
     <string name="identifiant">Identifiant :</string>
     <string name="motDePasse">Mot de passe :</string>
     <string name="boutonConnexion">Se connecter</string>
-    <string name="erreurIdentifiant">Votre identifiant est incorrect !</string>
-    <string name="erreurMotDePasse">Votre mot de passe est incorrect !</string>
+    <string name="erreurIdentifiant">Identifiant incorrect. Votre adresse email n\'est pas valide.</string>
+    <string name="erreurMotDePasse">Mot de passe incorrect. Il doit contenir entre 8 et 15 caractères et être composé d\'au moins 1 majuscule, 1 minuscule et 1 chiffre.</string>
     <string name="erreurChampsVides">Veuillez renseigner tous les champs s\'il vous plaît !</string>
+    <string name="erreur_msg_mauvais_compte">Impossible de vous connecter à l\'application, ce compte n\'existe pas.</string>
+    <string name="erreur_connexion_internet">Pas de connexion internet, impossible de se connecter à l\'application !</string>
     <!--_____________________-->
 
     <!--page liste des dossiers sav et page détail dossier sav-->
     <string name="titre_ListeDossierClient">Dossiers SAV</string>
     <string name="titre_rechercheListeDossierClient">Critères de recherche</string>
     <string name="msg_erreur_numeroDossier">Votre numéro de dossier est incorrect !</string>
-    <string name="msg_erreur_codePostal">Votre code postal est incorrect !</string>
     <string name="id_dossier">N° Dossier :</string>
     <string name="date_creation">Date Création :</string>
     <string name="nom_client">Nom Client : </string>
     <string name="code_postal">Code Postal : </string>
     <string name="statut">Statut SAV :</string>
     <string name="bouton_recherche_listeDossier">Rechercher</string>
+    <string name="numero_dossier">N° Dossier :</string>
     <string name="titre_dossier">Dossier SAV</string>
     <string name="cause">Cause SAV :</string>
     <string name="type">Type SAV :</string>
     <string name="numCommande">N° Commande :</string>
+    <string name="bonjour">Bonjour</string>
+    <string name="nombreDossiersSav">Total Dossiers :</string>
+    <string name="erreurChampsVidesCriteres">Veuillez renseigner au moins un champ s\'il vous plaît !</string>
+    <string name="msg_erreur_nomClient">Nom du client incorrect ! Il doit être composé de 3 à 30 caractères maximums.</string>
+    <string name="msg_erreur_codePostal">Code postal incorrect ! Il doit être composé de 2 à 5 chiffres maximums.</string>
+    <string name="erreurListeTrouveeVide">Aucune liste n\'a été trouvée pour ce(s) critère(s).</string>
     <!--____________________________-->
 
     <!--bouton utilisé dans plusieurs pages-->

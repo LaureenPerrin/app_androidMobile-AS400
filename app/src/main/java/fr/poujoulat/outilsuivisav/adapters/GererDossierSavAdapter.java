@@ -16,7 +16,7 @@ import fr.poujoulat.outilsuivisav.bo.GererDossierSav;
 public class GererDossierSavAdapter extends RecyclerView.Adapter<GererDossierSavAdapter.ViewHolder>{
 
 
-   List<GererDossierSav> dossiers = null;
+    private List<GererDossierSav> dossiers = null;
     private View.OnClickListener monClickListener;
 
     /**
@@ -64,6 +64,7 @@ public class GererDossierSavAdapter extends RecyclerView.Adapter<GererDossierSav
 
     @Override
     public int getItemCount() {
+
         return dossiers.size();
     }
 
